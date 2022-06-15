@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import Header from "./header"
 import Row from "./row"
-export default function BaseDataTable({contentcontentName,cells,isLoading}){
+export default function BaseDataTable({content,contentName,cells,isLoading}){
   return (
     <div>
+        {contentName}
        <Header />
       <Row />
     </div>
