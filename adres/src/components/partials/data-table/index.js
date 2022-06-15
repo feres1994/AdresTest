@@ -5,9 +5,17 @@ import Row from "./row"
 export default function BaseDataTable({content,contentName,cells,isLoading}){
   return (
     <div>
-        {contentName}
+        
        <Header />
-      <Row />
+      {
+          content.map((record) => {
+          return (  <Row 
+            key={record.logId}
+            cells={cells}
+            contentName={contentName}
+            />)
+          })
+      }
     </div>
   )
 }
