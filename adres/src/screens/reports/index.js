@@ -10,7 +10,7 @@ export default function Index() {
 
 
   useEffect(() => {
-      axios.get('https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f?limit=10').then(res => setApplication(res.data.result.auditLog))
+      axios.get('https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f').then(res => setApplication(res.data.result.auditLog))
   })
 
   return (

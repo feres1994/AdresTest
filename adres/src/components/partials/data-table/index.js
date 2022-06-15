@@ -6,7 +6,9 @@ export default function BaseDataTable({content,contentName,cells,isLoading}){
   return (
     <table>
         
-       <Header />
+       <thead>
+       <Header  cells={cells}/>
+       </thead>
        <tbody>
       {
           content.map((record) => {
