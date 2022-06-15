@@ -4,9 +4,10 @@ import Header from "./header"
 import Row from "./row"
 export default function BaseDataTable({content,contentName,cells,isLoading}){
   return (
-    <div>
+    <table>
         
        <Header />
+       <tbody>
       {
           content.map((record) => {
           return (  <Row 
@@ -17,7 +18,8 @@ export default function BaseDataTable({content,contentName,cells,isLoading}){
             />)
           })
       }
-    </div>
+      </tbody>
+    </table>
   )
 }
 
