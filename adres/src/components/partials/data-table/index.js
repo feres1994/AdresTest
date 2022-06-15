@@ -13,6 +13,7 @@ export default function BaseDataTable({content,contentName,cells,isLoading}){
             key={record.logId}
             cells={cells}
             contentName={contentName}
+            record={record}
             />)
           })
       }

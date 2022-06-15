@@ -18,6 +18,14 @@
 
                 const cells = [
                     {
+                        id: "logId",
+                        name: "logId",
+                        dbName: "logId",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                    },
+                    {
                       id: "applicationId",
                       name: "id",
                       dbName: "applicationId",
@@ -32,6 +40,84 @@
                         sortable: true,
                         dataType: "String",
                         minWidth: 250,
-                      },]
+                      },
+                      {
+                        id: "companyId",
+                        name: "company id",
+                        dbName: "companyId",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+
+                      {
+                        id: "actionType",
+                        name: "Action Type",
+                        dbName: "actionType",
+                        sortable: true,
+                        dataType: "String",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "ip",
+                        name: "ip",
+                        dbName: "ip",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "userAgent",
+                        name: "user Agent",
+                        dbName: "userAgent",
+                        sortable: true,
+                        dataType: "String",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "userId",
+                        name: "user Id",
+                        dbName: "userId",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "source",
+                        name: "source",
+                        dbName: "source",
+                        sortable: true,
+                        dataType: "String",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "ownerId",
+                        name: "owner Id",
+                        dbName: "ownerId",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "logInfo",
+                        name: "log Info",
+                        dbName: "logInfo",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+                      {
+                        id: "creationTimestamp",
+                        name: "creation Timestamp",
+                        dbName: "creationTimestamp",
+                        sortable: true,
+                        dataType: "Number",
+                        minWidth: 250,
+                      },
+
+                    
+                    ]
+
+
 
                 export default cells

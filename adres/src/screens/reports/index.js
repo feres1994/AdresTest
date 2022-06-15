@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import BaseDataTable from '../../components/partials/data-table'
 import data from "./data"
+import '../../assets/styles/main-design-system.css'
 
 export default function Index() {
 
