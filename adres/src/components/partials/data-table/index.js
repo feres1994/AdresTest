@@ -11,6 +11,13 @@ export default function BaseDataTable({contentcontentName,cells,isLoading}){
   )
 }
 
+BaseDataTable.propTypes = {
+    content: PropTypes.array,
+    isLoading: PropTypes.bool,
+    contentName: PropTypes.string.isRequired,
+    cells: PropTypes.array.isRequired,
+   
+  }
 
 
 
