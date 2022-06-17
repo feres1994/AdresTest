@@ -2,13 +2,18 @@ import React, { useState,useEffect } from "react";
 import API from '../../utils/API.js'
 import BaseDataTable from "../../components/partials/data-table";
 import BasePagination from "../../components/partials/base-pagination/index"
+import Filters from "./filters/index"
 import data from "./data";
 import "../../assets/styles/main-design-system.css";
 
 export default function Index() {
   const [applications, setApplication] = useState([]);
   const [totalPages,setTotalPages] = useState(0)
+  const [currentPage,setCurrentPage] = useState(1)
   const [isLoading, setIsLoading] = useState(true);
+
+  const paginatedData = applications.slice((currentPage * 10) - 10,currentPage * 10)
+
 
   function fetchData(){
     API({
@@ -22,18 +27,19 @@ export default function Index() {
   useEffect(() => {
      fetchData()
 
-  },[])
+  },[currentPage])
 
   return (
     <div>
+        <Filters />
       <BaseDataTable
         cells={data}
-        content={applications}
+        content={paginatedData}
         contentName={"ccc"}
         isLoading={isLoading}
       />
       {totalPages}
-      <BasePagination pages={totalPages} />
+      <BasePagination pages={totalPages}  emitCurrentPage={(newPage) => setCurrentPage(newPage)} />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.custom-select{
+    position: relative;
+    width: 150px
+}
+
+.custom-select-button {
+    padding: 15px;
+    width: 150px;
+    background: white;
+    border: solid
+}
+
+.custom-select-options{
+    position: absolute;
+    background: white;
+    width: 100%
+}

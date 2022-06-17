@@ -3,7 +3,7 @@ import Page from './page'
 import './index.css'
 
 
-export default function Index({pages}) {
+export default function Index({pages,emitCurrentPage}) {
     const [currentPage,setCurrentPage] = useState(1)
     const paginationArray= []
     for (let pageNumber = 0; pageNumber < pages; pageNumber++) {
@@ -12,6 +12,7 @@ export default function Index({pages}) {
 
     function goToPage(pageNumber){
         setCurrentPage(pageNumber)
+        emitCurrentPage(pageNumber)
     }
 
   return (
