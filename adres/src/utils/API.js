@@ -8,8 +8,6 @@ function API({
   
   }) {
    
-    
-    const requestParams = params
 
     const headers = {
       
@@ -22,7 +20,7 @@ function API({
       method,
       url ,
       data,
-      params: requestParams,
+      params,
       headers,
 
      
