@@ -21,7 +21,7 @@ export default function Index() {
         url: "https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f"
     }).then(res => {
         setApplication(res.data.result.auditLog)
-        setTotalPages(res.data.result.totalPages)
+        setTotalPages(res.data.result.auditLog.length)
       })
   }
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Index() {
         isLoading={isLoading}
       />
       {totalPages}
-      <BasePagination pages={totalPages}  emitCurrentPage={(newPage) => setCurrentPage(newPage)} />
+      <BasePagination pages={totalPages / 10}  emitCurrentPage={(newPage) => setCurrentPage(newPage)} />
     </div>
   );
 }
