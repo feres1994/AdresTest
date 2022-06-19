@@ -10,7 +10,7 @@ export default function index() {
     {name: "jjjj", value: "cC"}
     ]
   return (
-    <div className='row'>
+    <div className='row p-3'>
    <div className='col-lg-1 col-md-4'>
    <Input />
    </div>
@@ -31,7 +31,7 @@ export default function index() {
    </div>
    
    <div className='col-lg-2 col-md-4 d-flex align-items-center'>
-     <button className='search-logger-btn bg-primary text-white'>
+     <button className='search-logger-btn bg-primary text-white cursor-pointer'>
          Search logger
      </button>
    </div>

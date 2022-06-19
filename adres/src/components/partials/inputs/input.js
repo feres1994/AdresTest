@@ -4,8 +4,7 @@ export default function Input({label,name,type,value,placeholder,getInputValue})
     //expect the text input will be used in all the app but in dfferent way
     //prepare it as partial then make it custom, we can enhance it later
   return (
-    <div>
-
+    <div className='d-flex flex-column align-items-start '>
      <label>cccc</label>
        <div>
            <input name={name} type={type} value={value} placeholder={placeholder}
