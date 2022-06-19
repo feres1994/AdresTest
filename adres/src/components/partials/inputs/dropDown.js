@@ -14,7 +14,7 @@ setDisplayedOption(newName)
   return (
     <div className="custom-select">
         <label>cccc</label>
-    <div  className="custom-select-button" onClick={toggle}>
+    <div  className="custom-select-button text-field-partial" onClick={toggle}>
     <span className="custom-select-display-value">{displayedOption}</span>
   </div>
   <ul className="custom-select-options" 

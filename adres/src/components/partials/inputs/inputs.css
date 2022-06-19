@@ -1,15 +1,24 @@
+/*************** text field ***************/
+.text-field-partial{
+    width: 100%;
+    border: 2px solid #e2e9f3;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+  } 
+.text-field-partial:focus{
+    border-color: #e2e9f3;
+    box-shadow:0 0 1px 0 #e2e9f3;
+  }
+/************* drop-down partial ************/
 .custom-select{
     position: relative;
-    width: 150px
+    min-width: 150px;
+    text-align: left;
 }
-
-.custom-select-button {
-    padding: 15px;
-    width: 150px;
-    background: white;
-    border: solid
-}
-
 .custom-select-options{
     position: absolute;
     background: white;

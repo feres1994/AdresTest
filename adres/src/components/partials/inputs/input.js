@@ -6,9 +6,10 @@ export default function Input({label,name,type,value,placeholder,getInputValue})
   return (
     <div>
 
-       {label &&  <label>{label}</label>}
+     <label>cccc</label>
        <div>
            <input name={name} type={type} value={value} placeholder={placeholder}
+           className="text-field-partial"
             onChange={e => getInputValue(e.target.value)}
            />
        </div>
