@@ -4,7 +4,7 @@ import DropDown from '../../../components/partials/inputs/dropDown'
 import './index.css'
 
 
-export default function Index() {
+export default function Index({filterData}) {
     const options = [{name: "ccc", value: "cC"}
     , {name: "ddd", value: "cvcvC"},
     {name: "jjjj", value: "cC"}
@@ -64,7 +64,7 @@ getInputValue={(key,value) => setFilter(key, value)}    />
    </div>
    
    <div className='col-lg-2 col-md-4 d-flex align-items-center'>
-     <button className='search-logger-btn bg-primary text-white cursor-pointer'>
+     <button className='search-logger-btn bg-primary text-white cursor-pointer'   onClick={() => filterData(filter)}>
          Search logger
      </button>
    </div>

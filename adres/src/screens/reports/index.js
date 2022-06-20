@@ -11,6 +11,7 @@ export default function Index() {
   const [totalPages,setTotalPages] = useState(0)
   const [currentPage,setCurrentPage] = useState(1)
   const [isLoading, setIsLoading] = useState(true);
+  const [params,setParams] = useState({})
 
   const paginatedData = applications.slice((currentPage * 10) - 10,currentPage * 10)
 
@@ -18,7 +19,8 @@ export default function Index() {
   function fetchData(){
     API({
         methods: "get",
-        url: "https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f"
+        url: "https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f",
+        params,
     }).then(res => {
         setApplication(res.data.result.auditLog)
         setTotalPages(res.data.result.auditLog.length)
@@ -27,11 +29,15 @@ export default function Index() {
   useEffect(() => {
      fetchData()
 
-  },[currentPage])
+  },[currentPage,params])
+
+  function getParams(newFilterParams) {
+    setParams(newFilterParams)
+  }
 
   return (
     <div>
-        <Filters />
+        <Filters    filterData={(newFilterParams) => getParams(newFilterParams)}/>
       <BaseDataTable
         cells={data}
         content={paginatedData}
