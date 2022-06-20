@@ -10,7 +10,6 @@ export default function Index() {
   const [applications, setApplication] = useState([]);
   const [totalPages,setTotalPages] = useState(0)
   const [currentPage,setCurrentPage] = useState(1)
-  const [isLoading, setIsLoading] = useState(true);
   const [params,setParams] = useState({})
 
   const paginatedData = applications.slice((currentPage * 10) - 10,currentPage * 10)
@@ -42,7 +41,6 @@ export default function Index() {
         cells={data}
         content={paginatedData}
         contentName={"ccc"}
-        isLoading={isLoading}
       />
       {totalPages}
       <BasePagination pages={totalPages / 10}  emitCurrentPage={(newPage) => setCurrentPage(newPage)} />

@@ -12,7 +12,7 @@ export default function Header({cells}) {
                     key={i}>
                         {
                             cell.name || "---"
-                        }
+                        } {cell.sortable ?  <img src="https://img.icons8.com/ios-glyphs/30/undefined/circled-up-2.png"/> : ""}
                     </th>
                 )
             })
