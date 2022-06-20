@@ -34,14 +34,22 @@ applicationTd: "",
    name="employeeName"
    />
    </div>
+ 
+   <div className='col-lg-2 col-md-4'>
+    <DropDown  options={options}
+      name="applicationType"
+      label="Application Type"
+getInputValue={(key,value) => setFilter(key, value)}  
+    />
+   </div>
+   <div className='col-lg-2 col-md-4'>
+    <DropDown  options={options}
+       name="actionType"
+       label="Action Type"
+getInputValue={(key,value) => setFilter(key, value)}    />
+   </div>
    <div className='col-lg-1 col-md-4'>
    <Input />
-   </div>
-   <div className='col-lg-2 col-md-4'>
-    <DropDown  options={options}/>
-   </div>
-   <div className='col-lg-2 col-md-4'>
-    <DropDown  options={options}/>
    </div>
    <div className='col-lg-1 col-md-4'>
    <Input />
@@ -49,7 +57,7 @@ applicationTd: "",
    <div className='col-lg-1 col-md-4'
    >
    <Input 
-   label={'Application ID'} 
+   label="Application ID"
    getInputValue={(key,value) => setFilter(key, value)}
    name="applicationId"
    />

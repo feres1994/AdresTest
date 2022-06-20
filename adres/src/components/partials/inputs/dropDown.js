@@ -1,19 +1,20 @@
 import React, {useState} from 'react'
 import './inputs.css'
 
-export default function DropDown({options, setOption}) {
+export default function DropDown({options, name, label,placeholder,getInputValue}) {
     const [showDropDown,setShowDropDown] = useState(false)
     const [displayedOption,setDisplayedOption] = useState(options[0].name)
 
    function toggle(){
         setShowDropDown(!showDropDown)
     }
-    function changeDisplayedName(newName){
-setDisplayedOption(newName)
+    function changeDisplayedName(key,value){
+setDisplayedOption(value)
+getInputValue(key,value)
     }
   return (
     <div className="custom-select">
-        <label>cccc</label>
+        <label>{label}</label>
     <div  className="custom-select-button text-field-partial" onClick={toggle}>
     <span className="custom-select-display-value">{displayedOption}</span>
   </div>
@@ -25,7 +26,7 @@ setDisplayedOption(newName)
    {
        options.map((el,i) => {
            return (
-               <li onClick={() => changeDisplayedName(el.name)}
+               <li onClick={() => changeDisplayedName(name,el.name)}
                key={i}
                >{el.name}</li>
            )
