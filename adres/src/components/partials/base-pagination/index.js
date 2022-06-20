@@ -23,7 +23,7 @@ export default function Index({pages,emitCurrentPage}) {
        paginationArray.map((el,i) => {
            
        //display numbers when abs of elment - currentNumber page < 3 or if the number === totalPages - 1 or  if number === 1
-if (Math.abs(el - currentPage) < 3 ||
+if (Math.abs(el - currentPage) < 4 ||
         el === pages - 1 ||
         el === 1 ) {
             return  <Page 
@@ -34,9 +34,9 @@ if (Math.abs(el - currentPage) < 3 ||
             />
         }
         //if not : display ... when number === 1 and abs of this number - currentPage > 3 or if the number === totalPages - 2 and abs of this number - currentPage > 3
-if (  (el === 1 && Math.abs(el - currentPage) > 3) ||
+if (  (el === 1 && Math.abs(el - currentPage) > 4) ||
 (el === pages - 2 &&
-  Math.abs(el -  currentPage) > 3)) {
+  Math.abs(el -  currentPage) > 4)) {
       return <span
 
       key={i + '_limit'}
