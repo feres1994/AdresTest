@@ -4,19 +4,19 @@ export default function Header({ cells, sortDirection, setSort }) {
   const [sortMetric, setSortMetric] = useState("");
 
   function setDirection(value, sortDirection) {
-    let direction= ""
-    if(sortMetric !== value ){
-        console.log(value)
-        console.log(sortMetric)
-    }
-    if (sortMetric !== value || sortDirection.direction === "" || sortDirection.direction === "asc" ){
-       direction = "desc"
-    }
-    else {
-        direction = "asc"
-    }
+    let direction = "";
     setSortMetric(value);
-    setSort(value,direction)
+    if (
+      sortMetric !== value ||
+      sortDirection.direction === "" ||
+      sortDirection.direction === "asc"
+    ) {
+      direction = "desc";
+    } else {
+      direction = "asc";
+    }
+  
+    setSort(value, direction);
   }
 
   return (
@@ -30,16 +30,14 @@ export default function Header({ cells, sortDirection, setSort }) {
             <div className="d-flex align-items-center justify-content-center">
               <span>{cell.name || "---"}</span>
               {cell.sortable ? (
-                <img
-                  src="https://img.icons8.com/ios-glyphs/30/undefined/circled-up-2.png"
-                  alt="sort"
-                  className={
-                    sortDirection.direction === "desc" && sortMetric === cell.dbName
-                      ? "transform-180"
-                      : ""
-                  }
+                <i
+                  class={`fa-solid  cursor-pointer m-r-6 ${
+                  
+                    sortDirection.direction === "desc" &&
+                    sortMetric === cell.dbName ? 'fa-angle-down' : 'fa-angle-up'
+                  }`}
                   onClick={() => setDirection(cell.dbName, sortDirection)}
-                />
+                ></i>
               ) : (
                 ""
               )}

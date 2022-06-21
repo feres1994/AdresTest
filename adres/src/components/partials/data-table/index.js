@@ -2,16 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "./header";
 import Row from "./row";
-export default function BaseDataTable({ content,cells ,setSort ,sortByDirection }) {
+
+export default function BaseDataTable({
+  content,
+  cells,
+  setSort,
+  sortByDirection,
+}) {
   return (
     <table>
       <thead>
-        <Header cells={cells} sortDirection={sortByDirection} setSort={(value, name) => setSort(value,name)}/>
+        <Header
+          cells={cells}
+          sortDirection={sortByDirection}
+          setSort={(value, name) => setSort(value, name)}
+        />
       </thead>
       <tbody>
         {content.map((record, i) => {
           return (
-            <Row key={record.logId} cells={cells} record={record} index={i} />
+            <Row
+              key={record.logId}
+              cells={cells}
+              record={record}
+              index={i}
+            />
           );
         })}
       </tbody>
