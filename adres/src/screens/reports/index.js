@@ -10,7 +10,14 @@ export default function Index() {
   const [applications, setApplication] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [params, setParams] = useState({});
+  const [params, setParams] = useState({
+      sortBy: "",
+      direction: ""
+  });
+  const [sortByDirection, setSortByDirection] = useState({
+      direction: "",
+      sortBy: "" 
+  })
 
   const paginatedData = applications.slice(
     currentPage * 10 - 10,
@@ -32,13 +39,25 @@ export default function Index() {
   }, [currentPage, params]);
 
   function getParams(newFilterParams) {
-    setParams(newFilterParams);
+    setParams({...params, ...newFilterParams});
+  }
+  function setSort(value, direction){
+      console.log(value, 'ccccc')
+      console.log(direction, 'ccccdffdfdfd')
+      setSortByDirection({
+          direction,
+          sortBy: value
+      })
+      setParams({...params, sortBy: value, direction })
   }
 
   return (
     <div>
       <Filters filterData={(newFilterParams) => getParams(newFilterParams)} />
-      <BaseDataTable cells={data} content={paginatedData} />
+      <BaseDataTable cells={data} content={paginatedData}
+         setSort={(value, direction) => setSort(value, direction)}
+         sortByDirection={sortByDirection}
+      />
       <BasePagination
         pages={totalPages / 10}
         emitCurrentPage={(newPage) => setCurrentPage(newPage)}

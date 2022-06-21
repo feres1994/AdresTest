@@ -29,7 +29,8 @@ export default function Index({ filterData }) {
     <div className="row p-3">
       <div className="col-lg-1 col-md-4">
         <Input
-          label={"Employee Name"}
+          label="Employee Name"
+          placeholder="Employee Name"
           getInputValue={(key, value) => setFilter(key, value)}
           name="employeeName"
         />

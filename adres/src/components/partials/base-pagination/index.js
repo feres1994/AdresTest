@@ -29,6 +29,7 @@ export default function Index({ pages, emitCurrentPage }) {
               />
             </>
           );
+          return;
         }
 
         //if not : display ... when number === 1 and abs of this number - currentPage > 3 or if the number === totalPages - 2 and abs of this number - currentPage > 3
