@@ -5,15 +5,29 @@
 .bg-white {
     background-color: white;
 }
+.bg-gray {
+    background-color: #eaeaea;
+}
 .text-primary {
     color: #10489b;
 }
 .text-white {
     color: white
 }
+.text-bold {
+    font-weight: bold;
+}
+
+.transform-180 {
+    transform: rotate(180deg) !important
+}
+    
 /***************generic classes *******************/
 .cursor-pointer {
     cursor: pointer
+}
+.w-100 {
+    width: 100%
 }
 /****************  grid classes **************/
 

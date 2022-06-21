@@ -40,9 +40,7 @@ export default function Index() {
       <BaseDataTable
         cells={data}
         content={paginatedData}
-        contentName={"ccc"}
       />
-      {totalPages}
       <BasePagination pages={totalPages / 10}  emitCurrentPage={(newPage) => setCurrentPage(newPage)} />
     </div>
   );

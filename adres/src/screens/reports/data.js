@@ -5,14 +5,16 @@ const cells = [
     dbName: "logId",
     sortable: true,
     dataType: "Number",
-    minWidth: 250,
+    hiddenInMobile: true
   },
   {
     id: "applicationId",
-    name: "id",
+    name: "Application Id",
     dbName: "applicationId",
     sortable: true,
     dataType: "Number",
+    hiddenInMobile: true
+
   },
   {
     id: "applicationType",
@@ -20,6 +22,8 @@ const cells = [
     dbName: "applicationType",
     sortable: true,
     dataType: "String",
+    hiddenInMobile: true
+
   },
  
 
@@ -29,6 +33,8 @@ const cells = [
     dbName: "actionType",
     sortable: true,
     dataType: "String",
+    hiddenInMobile: true
+
   },
  
   {
@@ -37,6 +43,7 @@ const cells = [
     dbName: "creationTimestamp",
     sortable: true,
     dataType: "Number",
+    hiddenInMobile: true,
   },
 ];
 
