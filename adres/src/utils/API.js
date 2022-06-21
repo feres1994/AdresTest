@@ -1,31 +1,21 @@
-import axios from 'axios'
+import axios from "axios";
 
-function API({
+function API({ url, data, method, params }) {
+  const headers = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  };
+
+  if (params && method === "get") {
+  }
+  const request = axios({
+    method,
     url,
     data,
-    method,
     params,
-  
-  }) {
-   
+    headers,
+  });
+  return request;
+}
 
-    const headers = {
-      
-        Accept: "application/json",
-        "Content-Type": "application/json",      
-      };
-    
-    if (params && (method === "get")) {    }
-    const request = axios({
-      method,
-      url ,
-      data,
-      params,
-      headers,
-
-     
-    });
-    return request;
-  }
-  
-  export default API;
+export default API;

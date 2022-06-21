@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function page({disabled,page, changePage = () => {}}) {
+export default function page({ disabled, page, changePage = () => {} }) {
   return (
     <div
-    className={`
+      className={`
       d-flex
       align-items-center
       justify-content-center
@@ -13,13 +13,12 @@ export default function page({disabled,page, changePage = () => {}}) {
       cursor-pointer
       page-number
       text-neutral
-      ${disabled ? 'text-black bg-gray' : 'bg-white'}
-      `
-  }
-    disabled={disabled}
-    onClick={() => changePage(page + 1)}
-  >
-  <span>  { page + 1 }</span>
-  </div>
-  )
+      ${disabled ? "text-black bg-gray" : "bg-white"}
+      `}
+      disabled={disabled}
+      onClick={() => changePage(page + 1)}
+    >
+      <span> {page + 1}</span>
+    </div>
+  );
 }

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "./inputs.css";
 
-export default function DropDown({
-  options,
-  name,
-  label,
-  getInputValue,
-}) {
+export default function DropDown({ options, name, label, getInputValue }) {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [displayedOption, setDisplayedOption] = useState(options[0] && options[0].name);
+  const [displayedOption, setDisplayedOption] = useState(
+    options[0] && options[0].name
+  );
 
   function toggle() {
     setShowDropDown(!showDropDown);
@@ -19,7 +16,7 @@ export default function DropDown({
   }
   return (
     <div className="custom-select">
-      <label>{label}</label>
+      <label className="text-bold">{label}</label>
       <div className="custom-select-button text-field-partial" onClick={toggle}>
         <span className="custom-select-display-value">{displayedOption}</span>
       </div>

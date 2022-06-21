@@ -52,16 +52,10 @@ export default function Index({ filterData }) {
         />
       </div>
       <div className="col-lg-1 col-md-4">
-        <Input 
-         name="fromDate"
-         label="From Date"
-        />
+        <Input name="fromDate" label="From Date" />
       </div>
       <div className="col-lg-1 col-md-4">
-        <Input 
-        name="toDate"
-        label="To Date"
-        />
+        <Input name="toDate" label="To Date" />
       </div>
       <div className="col-lg-1 col-md-4">
         <Input
