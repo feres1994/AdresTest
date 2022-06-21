@@ -3,7 +3,7 @@ const cells = [
     id: "logId",
     name: "logId",
     dbName: "logId",
-    sortable: true,
+    sortable: false,
     dataType: "Number",
     hiddenInMobile: true
   },

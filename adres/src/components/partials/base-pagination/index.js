@@ -15,7 +15,7 @@ export default function Index({ pages, emitCurrentPage }) {
   }
 
   return (
-    <div className="d-flex justify-content-end m-t-24 p-18">
+    <div className="d-flex justify-content-center m-t-24 p-18">
       {paginationArray.map((el, i) => {
         //display numbers when abs of elment - currentNumber page < 3 or if the number === totalPages - 1 or  if number === 1
         if (Math.abs(el - currentPage) < 4 || el === pages - 1 || el === 1) {

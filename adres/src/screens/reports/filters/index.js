@@ -53,16 +53,17 @@ export default function Index({ filterData }) {
         />
       </div>
       <div className="col-lg-1 col-md-4">
-        <Input name="fromDate" label="From Date" />
+        <Input name="fromDate" label="From Date"  placeholder="From Date" />
       </div>
       <div className="col-lg-1 col-md-4">
-        <Input name="toDate" label="To Date" />
+        <Input name="toDate" label="To Date" placeholder="To Date"/>
       </div>
       <div className="col-lg-1 col-md-4">
         <Input
           label="Application ID"
           getInputValue={(key, value) => setFilter(key, value)}
           name="applicationId"
+          placeholder="Application Id"
         />
       </div>
 

@@ -31,7 +31,7 @@ export default function Header({ cells, sortDirection, setSort }) {
               <span>{cell.name || "---"}</span>
               {cell.sortable ? (
                 <i
-                  class={`fa-solid  cursor-pointer m-r-6 ${
+                  class={`fa-solid  cursor-pointer m-l-6 ${
                   
                     sortDirection.direction === "desc" &&
                     sortMetric === cell.dbName ? 'fa-angle-down' : 'fa-angle-up'
