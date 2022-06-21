@@ -3,7 +3,6 @@ import React from "react";
 export default function Input({
   label,
   name,
-  type,
   value,
   placeholder,
   getInputValue,
@@ -16,7 +15,7 @@ export default function Input({
       <div>
         <input
           name={name}
-          type={type}
+          type="text"
           value={value}
           placeholder={placeholder}
           className="text-field-partial"

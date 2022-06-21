@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../../components/partials/inputs/input";
 import DropDown from "../../../components/partials/inputs/dropDown";
+import DatePickerComponent from '../../../components/partials/inputs/DatePicker'
 import "./index.css";
 
 export default function Index({ filterData }) {
@@ -53,10 +54,17 @@ export default function Index({ filterData }) {
         />
       </div>
       <div className="col-lg-1 col-md-4">
-        <Input name="fromDate" label="From Date"  placeholder="From Date" />
-      </div>
+      <DatePickerComponent 
+        name="fromDate" label="From Date" 
+        getInputValue={(key, value) => setFilter(key, value)}
+
+        />      </div>
       <div className="col-lg-1 col-md-4">
-        <Input name="toDate" label="To Date" placeholder="To Date"/>
+        <DatePickerComponent 
+        name="toDate" label="To Date" 
+        getInputValue={(key, value) => setFilter(key, value)}
+
+        />
       </div>
       <div className="col-lg-1 col-md-4">
         <Input
