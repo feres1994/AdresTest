@@ -8,11 +8,19 @@
 .bg-gray {
     background-color: #eaeaea;
 }
+
 .text-primary {
     color: #10489b;
 }
 .text-white {
     color: white
+}
+.text-neutral {
+    color: #8c8787;
+}
+
+.text-black {
+    color: black;
 }
 .text-bold {
     font-weight: bold;
@@ -20,6 +28,14 @@
 
 .transform-180 {
     transform: rotate(180deg) !important
+}
+
+/****************** spaces ************************/
+.p-18 {
+padding: 18px;
+}
+.m-t-24{
+    margin-top: 24px
 }
     
 /***************generic classes *******************/

@@ -16,7 +16,7 @@ export default function Index({pages,emitCurrentPage}) {
     }
 
   return (
-    <div className='d-flex'>
+    <div className='d-flex justify-content-end m-t-24 p-18'>
      {
 
 
@@ -26,13 +26,18 @@ export default function Index({pages,emitCurrentPage}) {
 if (Math.abs(el - currentPage) < 4 ||
         el === pages - 1 ||
         el === 1 ) {
-            return  <Page 
+            return  <>
+            
+            <Page 
             key={i}
             page={el}
-            disabled={el+1 === i}
+            disabled={el + 1 === currentPage}
             changePage={goToPage}
             />
+            </>
+
         }
+        
         //if not : display ... when number === 1 and abs of this number - currentPage > 3 or if the number === totalPages - 2 and abs of this number - currentPage > 3
 if (  (el === 1 && Math.abs(el - currentPage) > 4) ||
 (el === pages - 2 &&
