@@ -1,5 +1,7 @@
 import React from "react";
 import Collapse from "./collapse";
+import PropTypes from "prop-types";
+
 
 export default function Row({ cells, record, index }) {
   return (
@@ -27,3 +29,10 @@ export default function Row({ cells, record, index }) {
     </>
   );
 }
+
+Row.propTypes = {
+    record: PropTypes.object,
+    cells: PropTypes.array.isRequired,
+    sortByDirection: PropTypes.object,
+    index: PropTypes.number
+  };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function Header({ cells, sortDirection, setSort }) {
   const [sortMetric, setSortMetric] = useState("");
@@ -49,3 +50,8 @@ export default function Header({ cells, sortDirection, setSort }) {
     </tr>
   );
 }
+
+Header.propTypes = {
+    cells: PropTypes.array.isRequired,
+    sortByDirection: PropTypes.object
+  };

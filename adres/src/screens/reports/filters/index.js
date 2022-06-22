@@ -74,6 +74,9 @@ export default function Index({ filterData }) {
         <button
           className="search-logger-btn bg-primary text-white cursor-pointer"
           onClick={() => filterData(filter)}
+          
+          
+
         >
           Search logger
         </button>

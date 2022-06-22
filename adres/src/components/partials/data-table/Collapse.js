@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Collapse({ cells, record, bg }) {
   return (
@@ -14,3 +15,9 @@ export default function Collapse({ cells, record, bg }) {
     </td>
   );
 }
+
+Collapse.propTypes = {
+    record: PropTypes.object,
+    cells: PropTypes.array.isRequired,
+    bg: PropTypes.string,
+  };

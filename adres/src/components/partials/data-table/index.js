@@ -36,6 +36,6 @@ export default function BaseDataTable({
 
 BaseDataTable.propTypes = {
   content: PropTypes.array,
-  isLoading: PropTypes.bool,
   cells: PropTypes.array.isRequired,
+  sortByDirection: PropTypes.object
 };
