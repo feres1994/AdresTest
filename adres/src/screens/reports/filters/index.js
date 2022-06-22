@@ -6,17 +6,12 @@ import "./index.css";
 
 export default function Index({ filterData }) {
   const options = [
-    { name: "ccc", value: "cC" },
-    { name: "ddd", value: "cvcvC" },
-    { name: "jjjj", value: "cC" },
+    { name: "option 1", value: "option1" },
+    { name: "option 2", value: "option2" },
+    { name: "option 3", value: "option3" },
   ];
   const [filter, setFilters] = useState({
-    employeeName: "",
-    actionType: "",
-    applicationType: "",
-    fromDate: "",
-    toDate: "",
-    applicationTd: "",
+  
   });
 
   function setFilter(key, value) {

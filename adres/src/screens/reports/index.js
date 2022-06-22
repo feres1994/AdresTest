@@ -13,8 +13,7 @@ export default function Index() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setIsLoading] = useState(false);
   const [params, setParams] = useState({
-    sortBy: "",
-    direction: "",
+    
   });
   const [sortByDirection, setSortByDirection] = useState({
     direction: "",
