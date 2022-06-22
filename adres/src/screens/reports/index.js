@@ -45,6 +45,7 @@ export default function Index() {
     setParams({ ...params, ...newFilterParams });
   }
   function setSort(value, direction) {
+    
     setSortByDirection({
       direction,
       sortBy: value,

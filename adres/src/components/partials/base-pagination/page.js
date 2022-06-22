@@ -18,7 +18,7 @@ export default function page({ disabled, page, changePage = () => {} }) {
       disabled={disabled}
       onClick={() => changePage(page + 1)}
     >
-      <span> {page + 1}</span>
+      <span data-testid="page-item">{page + 1}</span>
     </div>
   );
 }

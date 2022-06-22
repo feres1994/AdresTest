@@ -12,6 +12,7 @@ export default function Row({ cells, record, index }) {
             <td
               className={cell.hiddenInMobile ? "d-md-table-cell d-none " : ""}
               key={i}
+              data-testid="record-item"
             >
               {record[cell.dbName] || "---"}
             </td>

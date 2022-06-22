@@ -22,18 +22,14 @@ describe("DropDown", () => {
 
     const optionsElementLength = screen.getAllByTestId("list-item").length;
     expect(optionsElementLength).toBe(3);
-    
   });
 
   it("should render the same name found in options array", () => {
     render(<DropDown label="optionsItems" options={options} />);
 
-    const optionsElement= screen.getAllByTestId("list-item").map(el => el);
-    expect(optionsElement[0].innerHTML).toBe("option 1")  
-    expect(optionsElement[1].innerHTML).toBe("option 2")  
-    expect(optionsElement[2].innerHTML).toBe("option 3")    
-  
-  
-    
+    const optionsElement = screen.getAllByTestId("list-item").map((el) => el);
+    expect(optionsElement[0].innerHTML).toBe("option 1");
+    expect(optionsElement[1].innerHTML).toBe("option 2");
+    expect(optionsElement[2].innerHTML).toBe("option 3");
   });
 });
