@@ -18,7 +18,10 @@ export default function DropDown({ options, name, label, getInputValue }) {
     <div className="custom-select">
       <label className="text-bold">{label}</label>
       <div className="custom-select-button text-field-partial" onClick={toggle}>
+        <div className="d-flex justify-content-between">
         <span className="custom-select-display-value">{displayedOption}</span>
+        <i className="fa-solid fa-angle-down"  />
+        </div>
       </div>
       <ul
         className="custom-select-options"

@@ -1,5 +1,5 @@
 import React from "react";
-import Collapse from "./Collapse";
+import Collapse from "./collapse";
 
 export default function Row({ cells, record, index }) {
   return (

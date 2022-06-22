@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../../components/partials/inputs/input";
 import DropDown from "../../../components/partials/inputs/dropDown";
-import DatePickerComponent from '../../../components/partials/inputs/DatePicker'
+import DatePickerComponent from '../../../components/partials/inputs/datePicker'
 import "./index.css";
 
 export default function Index({ filterData }) {
@@ -28,16 +28,16 @@ export default function Index({ filterData }) {
 
   return (
     <div className="row p-3">
-      <div className="col-lg-1 col-md-4">
+      <div className="col-lg-1 col-md-4 ">
         <Input
-          label="Employee Name"
+          label="Employee"
           placeholder="Employee Name"
           getInputValue={(key, value) => setFilter(key, value)}
           name="employeeName"
         />
       </div>
 
-      <div className="col-lg-2 col-md-4">
+      <div className="col-lg-2 col-md-4 ">
         <DropDown
           options={options}
           name="applicationType"
@@ -45,7 +45,7 @@ export default function Index({ filterData }) {
           getInputValue={(key, value) => setFilter(key, value)}
         />
       </div>
-      <div className="col-lg-2 col-md-4">
+      <div className="col-lg-2 col-md-4 ">
         <DropDown
           options={options}
           name="actionType"
@@ -53,20 +53,20 @@ export default function Index({ filterData }) {
           getInputValue={(key, value) => setFilter(key, value)}
         />
       </div>
-      <div className="col-lg-1 col-md-4">
+      <div className="col-lg-1 col-md-4 ">
       <DatePickerComponent 
         name="fromDate" label="From Date" 
         getInputValue={(key, value) => setFilter(key, value)}
 
         />      </div>
-      <div className="col-lg-1 col-md-4">
+      <div className="col-lg-1 col-md-4 ">
         <DatePickerComponent 
         name="toDate" label="To Date" 
         getInputValue={(key, value) => setFilter(key, value)}
 
         />
       </div>
-      <div className="col-lg-1 col-md-4">
+      <div className="col-lg-1 col-md-4 ">
         <Input
           label="Application ID"
           getInputValue={(key, value) => setFilter(key, value)}

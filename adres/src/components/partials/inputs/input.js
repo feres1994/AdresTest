@@ -10,7 +10,7 @@ export default function Input({
   //expect the text input will be used in all the app but in dfferent way
   //prepare it as partial then make it custom, we can enhance it later
   return (
-    <div className="d-flex flex-column align-items-start ">
+    <div className="custom-select">
       <label className="text-bold">{label}</label>
       <div>
         <input

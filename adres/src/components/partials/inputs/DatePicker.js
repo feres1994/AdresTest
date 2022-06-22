@@ -11,9 +11,11 @@ export default function DatePickerInput({ label, getInputValue,name }) {
     getInputValue(name,date);
   }
   return (
-    <>
+    <div className="custom-select">
       <label className="text-bold">{label}</label>
-      <DatePicker selected={selectedDate} onChange={(date) => setDate(date)} />
-    </>
+      <DatePicker selected={selectedDate} 
+      className="custom-select-button text-field-partial"
+      onChange={(date) => setDate(date)} />
+    </div>
   );
 }

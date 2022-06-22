@@ -16,11 +16,25 @@
 /************* drop-down partial ************/
 .custom-select{
     position: relative;
-    min-width: 150px;
+    min-width: 100px;
     text-align: left;
 }
 .custom-select-options{
     position: absolute;
     background: white;
-    width: 100%
+    top: 60px;
+    width: 100%;
+    z-index: 1;
+    width: 81%;
+    box-shadow: 0px 15px 60px rgb(0 0 0 / 12%);
+    height: 150px;
+    overflow: auto;
+    border-radius: 0px 0px 8px 8px;
+}
+.custom-select-options li {
+    list-style-type: none;
+    padding:  15px 0px;
+    border-bottom: 1px solid #e2e9f3;
+    cursor: pointer;
+
 }

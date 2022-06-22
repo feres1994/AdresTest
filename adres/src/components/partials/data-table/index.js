@@ -22,7 +22,7 @@ export default function BaseDataTable({
         {content.map((record, i) => {
           return (
             <Row
-              key={record.logId}
+              key={i}
               cells={cells}
               record={record}
               index={i}

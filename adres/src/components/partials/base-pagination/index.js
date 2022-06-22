@@ -38,7 +38,7 @@ export default function Index({ pages, emitCurrentPage }) {
           (el === pages - 2 && Math.abs(el - currentPage) > 4)
         ) {
           return (
-            <span key={i + "_limit"} className="page-number">
+            <span key={i + 1} className="page-number">
               ...
             </span>
           );
