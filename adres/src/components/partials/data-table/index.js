@@ -35,7 +35,7 @@ export default function BaseDataTable({
 }
 
 BaseDataTable.propTypes = {
-  content: PropTypes.array,
-  cells: PropTypes.array.isRequired,
-  sortByDirection: PropTypes.object
-};
+    content: PropTypes.array,
+    cells: PropTypes.array.isRequired,
+    sortByDirection: PropTypes.object
+  };

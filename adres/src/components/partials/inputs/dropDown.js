@@ -29,7 +29,7 @@ export default function DropDown({ options, name, label, getInputValue }) {
       >
         {options.map((el, i) => {
           return (
-            <li onClick={() => changeDisplayedName(name, el.name)} key={i}>
+            <li onClick={() => changeDisplayedName(name, el.name)} key={i} data-testid="list-item">
               {el.name}
             </li>
           );
