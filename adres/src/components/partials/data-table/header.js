@@ -39,6 +39,7 @@ export default function Header({ cells, sortDirection, setSort }) {
                       : "fa-angle-up"
                   }`}
                   onClick={() => setDirection(cell.dbName, sortDirection)}
+                  data-testid="sort-icon"
                 ></i>
               ) : (
                 ""
