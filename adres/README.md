@@ -30,19 +30,30 @@ those test are very helpful, it limit components bug, also it help QA team in sc
 
 .
 └── adres technical test app/
+
     ├── node_modules/
+
     ├── public/
+
     ├── src/
+
     │   ├── assets/
+
     │   │   └── styles/
+
     │   │       └── main-design-system.css
+
     │   ├── components/
+
     │   │   └── partials/
+
     │   │       ├── base-pagination/
+
     │   │       │   ├── index.css
     │   │       │   ├── index.js
     │   │       │   ├── index.test.js
     │   │       │   └── page.js
+
     │   │       ├── data-table/
     │   │       │   ├── test/
     │   │       │   │   └── index.test.js
@@ -50,16 +61,19 @@ those test are very helpful, it limit components bug, also it help QA team in sc
     │   │       │   ├── header.js
     │   │       │   ├── index.js
     │   │       │   └── row.js
+
     │   │       ├── inputs/
     │   │       │   ├── test/
     │   │       │   ├── datePicker.js
     │   │       │   ├── dropDown.js
     │   │       │   ├── input.js 
     │   │       │   └── input.css
+
     │   │       └── loader/
     │   │           ├── index.css
     │   │           ├── index.js
     │   │           └── loader.js
+
     │   ├── screens/
     │   │   └── reports/
     │   │       ├── filters/
@@ -69,8 +83,10 @@ those test are very helpful, it limit components bug, also it help QA team in sc
     │   │       │   └── index.test.js
     │   │       ├── data.js
     │   │       └── index.js
+
     │   ├── utils/
     │   │   └── API.js
+    
     │   ├── App.js
     │   ├── App.css
     │   ├── App.test
