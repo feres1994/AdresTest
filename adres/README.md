@@ -7,12 +7,13 @@ this data is also filtred by multiple query params (i add those query to the api
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run but before cd adres then run:
 ### `npm i`
 
 to get all dependencies
 
 ### `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
