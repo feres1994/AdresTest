@@ -39,10 +39,18 @@ export default function Index() {
   }
   useEffect(() => {
     fetchData();
-  }, [currentPage, params]);
+  }, [ params]);
 
   function getParams(newFilterParams) {
-    setParams({ ...params, ...newFilterParams });
+   let obj = { ...params, ...newFilterParams }
+    for (const key in obj) {
+      console.log(obj[key])
+      if (obj[key] === '') {
+        console.log(obj[key])
+        delete obj[key];
+      }
+    }
+    setParams(obj);
   }
   function setSort(value, direction) {
     
@@ -50,6 +58,7 @@ export default function Index() {
       direction,
       sortBy: value,
     });
+    
     setParams({ ...params, sortBy: value, direction });
   }
 

@@ -15,10 +15,11 @@ export default function Index({ filterData }) {
   });
 
   function setFilter(key, value) {
-    setFilters({
-      ...filter,
-      [key]: value,
-    });
+   
+      setFilters({
+        ...filter,
+        [key]: value,});
+    
   }
 
   return (
